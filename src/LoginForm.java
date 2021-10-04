@@ -105,7 +105,7 @@ public class LoginForm implements ActionListener{
                                         if (adminRS.next()){
                                                 JOptionPane.showMessageDialog(login_frame,"Login Successful as Admin");
                                                 login_frame.dispose();
-//                                                new AdminDashboard();
+                                                new AdminDashboard();
                                         }else if (adminName.length()==0 || adminPassword.length()==0){
                                                 JOptionPane.showMessageDialog(btn_login, "Please fill both the details");
                                         }
