@@ -62,7 +62,7 @@ public class AdminDashboard implements ActionListener {
         }
         if (e.getSource()==viewDriver){
             admin_dashboard.dispose();
-//            new ViewDriver();
+            new ViewDriver();
         }
         if (e.getSource()==addroute){
             admin_dashboard.dispose();
@@ -74,3 +74,4 @@ public class AdminDashboard implements ActionListener {
         }
     }
 }
+
