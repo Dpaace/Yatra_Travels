@@ -4,7 +4,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddRoute implements ActionListener {
+public class
+AddRoute implements ActionListener {
     JFrame route;
     JLabel routeName, routePrice;
     JTextField routeGetName, routeGetPrice;
@@ -71,7 +72,7 @@ public class AddRoute implements ActionListener {
 
         route.setLayout(null);
         route.setVisible(true);
-
+        route.setResizable(false);
     }
     private  void resetFood(){
         routeGetName.setText("");

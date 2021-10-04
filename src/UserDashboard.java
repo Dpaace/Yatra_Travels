@@ -55,7 +55,7 @@ public class UserDashboard implements ActionListener {
         }
         if (e.getSource()==btnDelete){
             dash.dispose();
-//            new UserDelete(user);
+            new UserDelete(user);
         }
         if (e.getSource() == btnTicket) {
 //            new BookTicket(user);
