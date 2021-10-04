@@ -11,7 +11,7 @@ public class DatabaseOperation {
             // Create the connection object
             String url = "jdbc:mysql://127.0.0.1:3306/draft";
             String user = "root";
-            String password = "#Plasmodium#406";
+            String password = "12345678";
             conn = DriverManager.getConnection(url,user,password);
 //            if (conn!=null){
 //                System.out.println("Database is connected successfully");

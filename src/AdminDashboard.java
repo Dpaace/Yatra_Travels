@@ -66,7 +66,7 @@ public class AdminDashboard implements ActionListener {
         }
         if (e.getSource()==addroute){
             admin_dashboard.dispose();
-//            new AddRoute();
+           new AddRoute();
         }
         if (e.getSource()==viewRoute){
             admin_dashboard.dispose();
