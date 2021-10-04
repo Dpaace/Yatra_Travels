@@ -51,7 +51,7 @@ public class UserDashboard implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==btnProfile){
             dash.dispose();
-//            new ProfileUpdate(user);
+            new ProfileUpdate(user);
         }
         if (e.getSource()==btnDelete){
             dash.dispose();

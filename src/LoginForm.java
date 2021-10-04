@@ -127,7 +127,7 @@ public class LoginForm implements ActionListener{
                                         if (rs.next()){
                                                 JOptionPane.showMessageDialog(login_frame,"Login Successful");
                                                 login_frame.dispose();
-//                                                new UserDashboard(name);
+                                                new UserDashboard(name);
                                         }else if (name.length()==0 || pass.length()==0){
                                                 JOptionPane.showMessageDialog(btn_login, "Please fill both the details");
                                         }
