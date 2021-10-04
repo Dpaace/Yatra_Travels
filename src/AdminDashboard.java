@@ -70,7 +70,7 @@ public class AdminDashboard implements ActionListener {
         }
         if (e.getSource()==viewRoute){
             admin_dashboard.dispose();
-//            new ShowRoute();
+            new ShowRoute();
         }
     }
 }
