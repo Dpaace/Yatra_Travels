@@ -58,7 +58,7 @@ public class AdminDashboard implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==addDriver){
             admin_dashboard.dispose();
-//            new AddDriver();
+            new AddDriver();
         }
         if (e.getSource()==viewDriver){
             admin_dashboard.dispose();
