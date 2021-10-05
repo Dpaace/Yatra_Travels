@@ -17,6 +17,7 @@ public class ShowRoute implements ActionListener {
     public ShowRoute() {
         viewFrame = new JFrame("Route Details");
         Font f = new Font("arial", Font.BOLD, 18);
+        viewFrame.setLocation(350,150);
         viewFrame.setSize(700, 435);
 
 
@@ -67,6 +68,7 @@ public class ShowRoute implements ActionListener {
         }
         viewFrame.setLayout(null);
         viewFrame.setVisible(true);
+        viewFrame.setResizable(false);
     }
 
     public static void main(String[] args) {

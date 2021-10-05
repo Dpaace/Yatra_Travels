@@ -83,7 +83,7 @@ public class ShowDriver implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new ShowDriver("Dpaace");
+        new ShowDriver("asd");
     }
 
     @Override

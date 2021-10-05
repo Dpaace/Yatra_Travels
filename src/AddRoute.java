@@ -1,9 +1,11 @@
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddRoute implements ActionListener {
+public class
+AddRoute implements ActionListener {
     JFrame route;
     JLabel routeName, routePrice;
     JTextField routeGetName, routeGetPrice;
@@ -15,29 +17,27 @@ public class AddRoute implements ActionListener {
 
     public AddRoute(){
         route = new JFrame("Add Route");
+        route.setLocation(300,100);
         route.setSize(815,635);
 
-        Font fon1=new Font("cambria",Font.BOLD,20);
 
-        JLabel bg = new JLabel(new ImageIcon(getClass().getResource("AddRoute.png")));
-        bg.setBounds(0,0,800,600);
-        route.add(bg);
+        fon1=new Font("algerian",Font.BOLD,50);
 
-
-
+//        JLabel bg = new JLabel(new ImageIcon(getClass().getResource("MenuItem.png")));
+//        bg.setBounds(0,0,800,600);
+//        menuItemFrame.add(bg);
         // Route name and Text Field
         routeName = new JLabel("Route:");
         routeName.setBounds(64,180,60,30);
         route.add(routeName);
 
         routeGetName = new JTextField();
-        routeGetName .setBounds(64,210,346,40);
+        routeGetName .setBounds(64,210,272,40);
         routeGetName .setBackground(Color.WHITE);
         routeGetName .setForeground(Color.BLACK);
         routeGetName .setBorder(null);
         routeGetName .setHorizontalAlignment(JTextField.CENTER);
-        routeGetName.setFont(fon1);
-        bg.add(routeGetName );
+        route.add(routeGetName );
 
         // Food Price and Text Field
         routePrice = new JLabel("Price:");
@@ -45,23 +45,21 @@ public class AddRoute implements ActionListener {
         route.add(routePrice);
 
         routeGetPrice = new JTextField();
-        routeGetPrice.setBounds(64,365,346,40);
+        routeGetPrice.setBounds(64,365,272,40);
         routeGetPrice.setBackground(Color.WHITE);
         routeGetPrice.setForeground(Color.BLACK);
         routeGetPrice.setBorder(null);
         routeGetPrice.setHorizontalAlignment(JTextField.CENTER);
-        routeGetPrice.setFont(fon1);
-        bg.add(routeGetPrice);
+        route.add(routeGetPrice);
 
         // Add Food Button
         addroute = new JButton("Add Route");
-        addroute.setBounds(148,442,172,28);
+        addroute.setBounds(148,442,102,28);
         addroute.setBackground(Color.WHITE);
         addroute.setForeground(Color.BLACK);
         addroute.setBorder(null);
         addroute.addActionListener(this);
-        addroute.setFont(fon1);
-        bg.add(addroute);
+        route.add(addroute);
 
 
 
@@ -71,11 +69,11 @@ public class AddRoute implements ActionListener {
         btnBack.setForeground(Color.BLACK);
         btnBack.setBorder(null);
         btnBack.addActionListener(this);
-        bg.add(btnBack);
+        route.add(btnBack);
 
         route.setLayout(null);
         route.setVisible(true);
-
+        route.setResizable(false);
     }
     private  void resetFood(){
         routeGetName.setText("");
@@ -115,3 +113,5 @@ public class AddRoute implements ActionListener {
         }
     }
 }
+
+

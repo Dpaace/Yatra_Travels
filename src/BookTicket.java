@@ -118,7 +118,7 @@ public class BookTicket implements ActionListener {
 
 
     public static void main(String[] args) {
-        new BookTicket("Dpaace");
+        new BookTicket("bbb");
     }
 
     @Override

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,7 +17,10 @@ public class AddDriver implements ActionListener {
 
     public AddDriver(){
         driver = new JFrame("Add Driver Details");
+<<<<<<< HEAD
         driver.setSize(815,635);
+=======
+>>>>>>> origin/master
 
         fon1=new Font("algerian",Font.BOLD,50);
 
@@ -113,7 +120,13 @@ public class AddDriver implements ActionListener {
         bg.add(btnBack);
 
         driver.setLayout(null);
+<<<<<<< HEAD
         driver.setVisible(true);
+=======
+        driver.setBounds(300,100,815,635);
+        driver.setVisible(true);
+        driver.setResizable(false);
+>>>>>>> origin/master
     }
     private void driverReset(){
         driverName.setText("");

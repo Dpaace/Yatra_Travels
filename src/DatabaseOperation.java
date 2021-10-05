@@ -1,5 +1,4 @@
 import java.sql.*;
-
 public class DatabaseOperation {
     Connection conn;
     Statement stmt;
@@ -12,7 +11,7 @@ public class DatabaseOperation {
             // Create the connection object
             String url = "jdbc:mysql://127.0.0.1:3306/draft";
             String user = "root";
-            String password = "IRONman@123";
+            String password = "9841387582";
             conn = DriverManager.getConnection(url,user,password);
 //            if (conn!=null){
 //                System.out.println("Database is connected successfully");
@@ -32,7 +31,6 @@ public class DatabaseOperation {
         }
         return val;
     }
-
     public ResultSet select(String query){
         try {
             row1 = stmt.executeQuery(query);
@@ -41,7 +39,6 @@ public class DatabaseOperation {
         }
         return row1;
     }
-
     public int executeDelete(String query) {
         try {
             values=stmt.executeUpdate(query);
@@ -52,7 +49,6 @@ public class DatabaseOperation {
         // TODO Auto-generated method stub
         return values;
     }
-
     public  int Update(String query) {
         try {
             values = stmt.executeUpdate(query);
@@ -61,13 +57,10 @@ public class DatabaseOperation {
             throwables.printStackTrace();
         }
         return values;
-
     }
 
-
-
     public static void main(String[] args) {
-
         new DatabaseOperation();
     }
 }
+

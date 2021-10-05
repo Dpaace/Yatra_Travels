@@ -19,6 +19,7 @@ public class RegistrationForm implements ActionListener {
     public RegistrationForm(){
 
         reg_frame = new JFrame("Registration Page");
+        reg_frame.setLocation(350,200);
         reg_frame.setSize(615,435);
         reg_frame.setLayout(null);
 
@@ -127,6 +128,7 @@ public class RegistrationForm implements ActionListener {
         register.addActionListener(this);
         bg.add(register);
 
+        reg_frame.setResizable(false);
         reg_frame.setVisible(true);
     }
 
