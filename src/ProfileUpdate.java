@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
@@ -8,8 +9,8 @@ public class ProfileUpdate implements ActionListener {
     String user;
     JFrame profile;
     JLabel name, mob, email, gender, dob, address, pass, cpass;
-    JTextField txtName,txtMobile, txtEmail,txtPassword, txtConPassword;
-    JTextArea taAddress;
+    JLabel lbl_heading1, lbl_heading2, lbl_heading3, lbl_heading4;
+    JTextField txtName,txtMobile, txtEmail,txtPassword, txtConPassword, taAddress;
     JRadioButton male, female;
     JComboBox day, month, year;
     JButton btn_update, btnBack;
@@ -19,8 +20,37 @@ public class ProfileUpdate implements ActionListener {
     public ProfileUpdate(String user){
         this.user= user;
 
-        profile = new JFrame("Profile Page");
+        profile = new JFrame("Profile Update Page");
+        profile.setSize(815,635);
+        profile.setLayout(null);
 
+        JLabel bg = new JLabel(new ImageIcon(getClass().getResource("ProfileUpdate.png")));
+        bg.setBounds(0,0,800,600);
+        profile.add(bg);
+
+        lbl_heading1 = new JLabel("Welcome");
+        lbl_heading1.setFont(new Font("CAMBRIA",Font.BOLD,45));
+        lbl_heading1.setForeground(Color.WHITE);
+        lbl_heading1.setBounds(90,130,300,60);
+        bg.add(lbl_heading1);
+
+        lbl_heading2 = new JLabel("To");
+        lbl_heading2.setFont(new Font("CAMBRIA",Font.BOLD,45));
+        lbl_heading2.setForeground(Color.WHITE);
+        lbl_heading2.setBounds(160,200,300,60);
+        bg.add(lbl_heading2);
+
+        lbl_heading3 = new JLabel("Profile");
+        lbl_heading3.setFont(new Font("CAMBRIA",Font.BOLD,45));
+        lbl_heading3.setForeground(Color.WHITE);
+        lbl_heading3.setBounds(120,270,300,60);
+        bg.add(lbl_heading3);
+
+        lbl_heading4 = new JLabel("Update Page");
+        lbl_heading4.setFont(new Font("CAMBRIA",Font.BOLD,45));
+        lbl_heading4.setForeground(Color.WHITE);
+        lbl_heading4.setBounds(60,340,300,60);
+        bg.add(lbl_heading4);
 
 
         name = new JLabel("Name");
@@ -40,14 +70,18 @@ public class ProfileUpdate implements ActionListener {
         profile.add(gender);
 
         male = new JRadioButton("Male");
+        male.setBounds(520,280,60,38);
+        male.setBackground(Color.decode("#002147"));
+        male.setForeground(Color.WHITE);
+        male.setSelected(true);
+        bg.add(male);
+
         female = new JRadioButton("Female");
+        female.setBounds(620,280,70,38);
+        female.setBackground(Color.decode("#002147"));
+        female.setForeground(Color.WHITE);
+        bg.add(female);
 
-        male.setBounds(150,150,80,20);
-        female.setBounds(240,150,80,20);
-
-
-        profile.add(male);
-        profile.add(female);
 
         ButtonGroup gen = new ButtonGroup();
         gen.add(male);
@@ -67,13 +101,13 @@ public class ProfileUpdate implements ActionListener {
         month = new JComboBox(months);
         year = new JComboBox(years);
 
-        day.setBounds(150,200,50,20);
-        month.setBounds(210,200,50,20);
-        year.setBounds(270,200,60,20);
+        day.setBounds(520,333,50,25);
+        month.setBounds(580,333,60,25);
+        year.setBounds(650,333,60,25);
 
-        profile.add(day);
-        profile.add(month);
-        profile.add(year);
+        bg.add(day);
+        bg.add(month);
+        bg.add(year);
 
         address = new JLabel("Address");
         address.setBounds(20,250,100,20);
@@ -94,16 +128,28 @@ public class ProfileUpdate implements ActionListener {
         try {
             while (rs.next()){
                 txtName = new JTextField(rs.getString("name"));
-                txtName.setBounds(150,50,200,20);
-                profile.add(txtName);
+                txtName.setBounds(512,120,270,38);
+                txtName.setBackground(Color.WHITE);
+                txtName.setForeground(Color.BLACK);
+                txtName.setBorder(null);
+                txtName.setHorizontalAlignment(JTextField.CENTER);
+                bg.add(txtName);
 
                 txtMobile = new JTextField(rs.getString("mobile"));
-                txtMobile.setBounds(150,100,200,20);
-                profile.add(txtMobile);
+                txtMobile.setBounds(512,175,270,38);
+                txtMobile.setBackground(Color.WHITE);
+                txtMobile.setForeground(Color.BLACK);
+                txtMobile.setBorder(null);
+                txtMobile.setHorizontalAlignment(JTextField.CENTER);
+                bg.add(txtMobile);
 
                 txtEmail = new JTextField(rs.getString("email"));
-                txtEmail.setBounds(150,130,200,20);
-                profile.add(txtEmail);
+                txtEmail.setBounds(512,231,270,38);
+                txtEmail.setBackground(Color.WHITE);
+                txtEmail.setForeground(Color.BLACK);
+                txtEmail.setBorder(null);
+                txtEmail.setHorizontalAlignment(JTextField.CENTER);
+                bg.add(txtEmail);
 
                 String gender = rs.getString("gender");
 
@@ -115,44 +161,58 @@ public class ProfileUpdate implements ActionListener {
 
                 //DOB is left to be edited
 
-                taAddress = new JTextArea(rs.getString("address"));
-                taAddress.setBounds(150,240,200,30);
-                profile.add(taAddress);
+                taAddress = new JTextField(rs.getString("address"));
+                taAddress.setBounds(512,386,270,38);
+                taAddress.setBackground(Color.WHITE);
+                taAddress.setForeground(Color.BLACK);
+                taAddress.setBorder(null);
+                taAddress.setHorizontalAlignment(JTextField.CENTER);
+                bg.add(taAddress);
 
                 txtPassword = new JTextField(rs.getString("password"));
-                txtPassword.setBounds(150,300,200,20);
-                profile.add(txtPassword);
+                txtPassword.setBounds(512,442,270,38);
+                txtPassword.setBackground(Color.WHITE);
+                txtPassword.setForeground(Color.BLACK);
+                txtPassword.setBorder(null);
+                txtPassword.setHorizontalAlignment(JTextField.CENTER);
+                bg.add(txtPassword);
 
 
                 txtConPassword = new JTextField(rs.getString("con_password"));
-                txtConPassword.setBounds(150,330,200,20);
-                profile.add(txtConPassword);
+                txtConPassword.setBounds(512,498,270,38);
+                txtConPassword.setBackground(Color.WHITE);
+                txtConPassword.setForeground(Color.BLACK);
+                txtConPassword.setBorder(null);
+                txtConPassword.setHorizontalAlignment(JTextField.CENTER);
+                bg.add(txtConPassword);
 
                 btn_update = new JButton("Update Details");
-                btn_update.setBounds(100,360,200,20);
+                btn_update.setBounds(560,553,175,28);
+                btn_update.setBackground(Color.WHITE);
+                btn_update.setForeground(Color.BLACK);
+                btn_update.setBorder(null);
                 btn_update.addActionListener(this);
-                profile.add(btn_update);
+                bg.add(btn_update);
 
             }
         } catch (SQLException e){
             e.printStackTrace();
         }
 
-        btnBack = new JButton("Back to Dashboard");
-        btnBack.setBounds(100, 390,200,25);
+        btnBack = new JButton("Back");
+        btnBack.setBounds(72,38,80,32);
+        btnBack.setBackground(Color.decode("#f3cd74"));
+        btnBack.setForeground(Color.BLACK);
+        btnBack.setBorder(null);
         btnBack.addActionListener(this);
-        profile.add(btnBack);
+        bg.add(btnBack);
 
-        profile.setLocation(400,100);
-        profile.setSize(500,500);
-        profile.setLayout(null);
         profile.setVisible(true);
-
 
     }
 
     public static void main(String[] args) {
-        new ProfileUpdate("bbb");
+        new ProfileUpdate("Dipesh Nepali");
     }
 
     @Override

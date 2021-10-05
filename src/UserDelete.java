@@ -15,6 +15,14 @@ public class UserDelete implements ActionListener {
         this.user = user;
 
         delete = new JFrame("Delete Account");
+        delete.setSize(815,635);
+        delete.setLayout(null);
+
+        Font fon1=new Font("cambria",Font.BOLD,20);
+
+        JLabel bg = new JLabel(new ImageIcon(getClass().getResource("UserDelete.png")));
+        bg.setBounds(0,0,800,600);
+        delete.add(bg);
 
         userID = new JLabel("User ID : ");
         userID.setBounds(100, 70, 60, 25);
@@ -23,40 +31,46 @@ public class UserDelete implements ActionListener {
         GetUserID id = new GetUserID(user);
 
         getID = new JTextField(String.valueOf(id.getId()));
-        getID.setBounds(200, 70, 135, 25);
-        getID.setBackground(Color.WHITE);
-        getID.setForeground(Color.BLACK);
-        getID.setBorder(null);
-        getID.setHorizontalAlignment(JTextField.CENTER);
-        delete.add(getID);
+        getID .setBounds(227,210,346,40);
+        getID .setBackground(Color.WHITE);
+        getID .setForeground(Color.BLACK);
+        getID .setBorder(null);
+        getID .setHorizontalAlignment(JTextField.CENTER);
+        getID.setFont(fon1);
+        bg.add(getID );
 
         pass = new JPasswordField();
-        pass.setBounds(150, 120, 135, 25);
+        pass.setBounds(227,365,346,40);
         pass.setBackground(Color.WHITE);
         pass.setForeground(Color.BLACK);
         pass.setBorder(null);
         pass.setHorizontalAlignment(JTextField.CENTER);
-        delete.add(pass);
+        pass.setFont(fon1);
+        bg.add(pass);
 
         btnDelete = new JButton("Delete");
-        btnDelete.setBounds(120, 160,100,25);
+        btnDelete.setBounds(315,442,172,28);
+        btnDelete.setBackground(Color.WHITE);
+        btnDelete.setForeground(Color.BLACK);
+        btnDelete.setBorder(null);
         btnDelete.addActionListener(this);
-        delete.add(btnDelete);
+        btnDelete.setFont(fon1);
+        bg.add(btnDelete);
 
-        btnBack = new JButton("Back to Dashboard");
-        btnBack.setBounds(100, 200,200,25);
+        btnBack = new JButton("Back");
+        btnBack.setBounds(27,19,85,32);
+        btnBack.setBackground(Color.decode("#f3cd74"));
+        btnBack.setForeground(Color.BLACK);
+        btnBack.setBorder(null);
         btnBack.addActionListener(this);
-        delete.add(btnBack);
+        bg.add(btnBack);
 
-        delete.setLocation(300,100);
-        delete.setSize(500,500);
-        delete.setLayout(null);
+
         delete.setVisible(true);
-        delete.setResizable(false);
     }
 
     public static void main(String[] args) {
-        new UserDelete("a");
+        new UserDelete("Dpaace");
     }
 
     @Override
