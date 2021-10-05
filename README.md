@@ -31,8 +31,13 @@ It also contains the necessary CRUD operations based on the requirements of the 
 
 
 
-### Dipesh Nepali
-#### Coventry ID : 11494988
-#### Softwarica Student ID : 210089
-#### Email : dipeshnepali767@gmail.com
+
+#### Java Group Project
+#### LED Learning 2
 #### Batch '29 B'
+#### Group Members : 
+#### Dipesh Nepali - CU ID: 11494988
+#### Riya Shrestha - CU ID: 11495365
+#### Samita Limbu - CU ID: 11495468
+#### Dawa Sherpa - CU ID:  11494966
+#### Prashid Bhusal - CU ID: 11495284
