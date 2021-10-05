@@ -7,6 +7,9 @@ public class User {
     private String userAddress;
     private String password1;
     private String password2;
+
+    public User(){}
+
     public User(String username, String mobileNumber, String userEmail, String userGender, String userDob, String userAddress, String password1, String password2) {
         this.username = username;
         this.mobileNumber = mobileNumber;
