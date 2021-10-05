@@ -15,6 +15,7 @@ public class UserDelete implements ActionListener {
         this.user = user;
 
         delete = new JFrame("Delete Account");
+        delete.setLocation(300,100);
         delete.setSize(815,635);
         delete.setLayout(null);
 
@@ -67,6 +68,7 @@ public class UserDelete implements ActionListener {
 
 
         delete.setVisible(true);
+        delete.setResizable(false);
     }
 
     public static void main(String[] args) {

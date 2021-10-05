@@ -10,7 +10,9 @@ public class AdminDashboard implements ActionListener {
     public AdminDashboard(){
 
         admin_dashboard = new JFrame("Admin Dashboard");
+        admin_dashboard.setLocation(360,150);
         admin_dashboard.setSize(515,435);
+
 
 
         //Background Image
@@ -60,6 +62,7 @@ public class AdminDashboard implements ActionListener {
 
         admin_dashboard.setLayout(null);
         admin_dashboard.setVisible(true);
+        admin_dashboard.setResizable(false);
     }
 
     public static void main(String[] args) {

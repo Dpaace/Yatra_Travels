@@ -15,6 +15,7 @@ public class AddRoute implements ActionListener {
 
     public AddRoute(){
         route = new JFrame("Add Route");
+        route.setLocation(300,100);
         route.setSize(815,635);
         Font fon1=new Font("cambria",Font.BOLD,20);
         JLabel bg = new JLabel(new ImageIcon(getClass().getResource("AddRoute.png")));
@@ -70,9 +71,9 @@ public class AddRoute implements ActionListener {
         btnBack.setBorder(null);
         btnBack.addActionListener(this);
         bg.add(btnBack);
-
         route.setLayout(null);
         route.setVisible(true);
+        route.setResizable(false);
 
     }
     private  void resetFood(){

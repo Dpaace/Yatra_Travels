@@ -23,6 +23,7 @@ public class BookTicket implements ActionListener {
         viewFrame = new JFrame("Book Ticket");
         Font f = new Font("arial", Font.BOLD, 18);
         viewFrame.setSize(915, 535);
+        viewFrame.setLocation(300,100);
 
 
         JLabel bg = new JLabel(new ImageIcon(getClass().getResource("BookTicket.png")));
@@ -107,6 +108,7 @@ public class BookTicket implements ActionListener {
 
         viewFrame.setLayout(null);
         viewFrame.setVisible(true);
+        viewFrame.setResizable(false);
 
     }
 

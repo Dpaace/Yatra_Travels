@@ -20,8 +20,8 @@ public class ShowDriver implements ActionListener {
         this.user = user;
         viewFrame = new JFrame("Driver Details");
         Font fon1=new Font("cambria",Font.BOLD,20);
+        viewFrame.setLocation(300,100);
         viewFrame.setSize(700, 535);
-
 
         JLabel bg = new JLabel(new ImageIcon(getClass().getResource("ReportDriver.png")));
         bg.setBounds(0,0,685,500);
@@ -80,6 +80,7 @@ public class ShowDriver implements ActionListener {
         }
         viewFrame.setLayout(null);
         viewFrame.setVisible(true);
+        viewFrame.setResizable(false);
     }
 
     public static void main(String[] args) {
