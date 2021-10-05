@@ -15,8 +15,6 @@ public class UserDelete implements ActionListener {
         this.user = user;
 
         delete = new JFrame("Delete Account");
-        delete.setSize(500,500);
-        delete.setLayout(null);
 
         userID = new JLabel("User ID : ");
         userID.setBounds(100, 70, 60, 25);
@@ -50,8 +48,11 @@ public class UserDelete implements ActionListener {
         btnBack.addActionListener(this);
         delete.add(btnBack);
 
-
+        delete.setLocation(300,100);
+        delete.setSize(500,500);
+        delete.setLayout(null);
         delete.setVisible(true);
+        delete.setResizable(false);
     }
 
     public static void main(String[] args) {

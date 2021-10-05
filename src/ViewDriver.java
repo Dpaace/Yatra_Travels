@@ -17,8 +17,7 @@ public class ViewDriver implements ActionListener {
     public ViewDriver() {
         viewFrame = new JFrame("Driver Details");
         Font f = new Font("arial", Font.BOLD, 18);
-        viewFrame.setSize(700, 435);
-
+        viewFrame.setBounds(400,200,700, 435);
 
         JLabel bg = new JLabel(new ImageIcon(getClass().getResource("ViewDriver.png")));
         bg.setBounds(0,0,685,400);
@@ -68,6 +67,7 @@ public class ViewDriver implements ActionListener {
         }
         viewFrame.setLayout(null);
         viewFrame.setVisible(true);
+        viewFrame.setResizable(false);
     }
 
     public static void main(String[] args) {

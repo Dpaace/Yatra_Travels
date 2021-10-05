@@ -7,7 +7,7 @@ public class AdminDashboard implements ActionListener {
     JButton addDriver, viewDriver, addroute, viewRoute;
     public AdminDashboard(){
         admin_dashboard = new JFrame("Admin Dashboard");
-        admin_dashboard.setSize(515,435);
+        admin_dashboard.setBounds(300,100,515,435);
 
         //Background Image
 //        JLabel bg = new JLabel(new ImageIcon(getClass().getResource("AdminDashboard.png")));
@@ -50,6 +50,7 @@ public class AdminDashboard implements ActionListener {
         admin_dashboard.add(viewRoute);
         admin_dashboard.setLayout(null);
         admin_dashboard.setVisible(true);
+        admin_dashboard.setResizable(false);
     }
     public static void main(String[] args) {
         new AdminDashboard();

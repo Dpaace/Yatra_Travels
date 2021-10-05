@@ -17,6 +17,7 @@ AddRoute implements ActionListener {
 
     public AddRoute(){
         route = new JFrame("Add Route");
+        route.setLocation(300,100);
         route.setSize(815,635);
 
 

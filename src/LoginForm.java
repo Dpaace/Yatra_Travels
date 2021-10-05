@@ -19,6 +19,7 @@ public class LoginForm implements ActionListener{
                 // Making Login Frame
                 login_frame = new JFrame("Login Page");
                 login_frame.setSize(615,435);
+                login_frame.setLocation(400,150);
                 login_frame.setLayout(null);
 
                 // Adding Background Image
@@ -78,7 +79,7 @@ public class LoginForm implements ActionListener{
                 bg.add(lblSignup);
 
                 login_frame.setVisible(true);
-
+                login_frame.setResizable(false);
 
         }
 
@@ -107,7 +108,7 @@ public class LoginForm implements ActionListener{
                                                 login_frame.dispose();
                                                 new AdminDashboard();
                                         }else if (adminName.length()==0 || adminPassword.length()==0){
-                                                JOptionPane.showMessageDialog(btn_login, "Please fill both the details");
+                                                JOptionPane.showMessageDialog(login_frame, "Please fill both the details");
                                         }
                                         else {
                                                 JOptionPane.showMessageDialog(login_frame,"Invalid Login Credentials");

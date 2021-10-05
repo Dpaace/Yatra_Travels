@@ -20,8 +20,7 @@ public class ProfileUpdate implements ActionListener {
         this.user= user;
 
         profile = new JFrame("Profile Page");
-        profile.setSize(500,500);
-        profile.setLayout(null);
+
 
 
         name = new JLabel("Name");
@@ -143,7 +142,12 @@ public class ProfileUpdate implements ActionListener {
         btnBack.setBounds(100, 390,200,25);
         btnBack.addActionListener(this);
         profile.add(btnBack);
+
+        profile.setLocation(400,100);
+        profile.setSize(500,500);
+        profile.setLayout(null);
         profile.setVisible(true);
+
 
     }
 

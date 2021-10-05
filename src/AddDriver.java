@@ -14,7 +14,6 @@ public class AddDriver implements ActionListener {
 
     public AddDriver(){
         driver = new JFrame("Add Driver Details");
-        driver.setSize(815,635);
 
         fon1=new Font("algerian",Font.BOLD,50);
 
@@ -114,7 +113,9 @@ public class AddDriver implements ActionListener {
         bg.add(btnBack);
 
         driver.setLayout(null);
+        driver.setBounds(300,100,815,635);
         driver.setVisible(true);
+        driver.setResizable(false);
     }
     private void driverReset(){
         driverName.setText("");

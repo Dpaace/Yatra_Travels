@@ -19,9 +19,6 @@ public class UserDashboard implements ActionListener {
         lbl_heading.setForeground(Color.RED);
         lbl_heading.setBounds(150,10,300,50);
         dash.add(lbl_heading);
-        dash.setSize(700,500);
-        dash.setLayout(null);
-        dash.setVisible(true);
         btnProfile = new JButton("UPDATE PROFILE");
         btnProfile.setBounds(30, 50 ,200 ,40);
         btnProfile.addActionListener(this);
@@ -43,6 +40,11 @@ public class UserDashboard implements ActionListener {
         btnPayment.setBounds(30,300, 200, 40);
         btnPayment.addActionListener(this);
         dash.add(btnPayment);
+        dash.setLocation(300,100);
+        dash.setSize(700,500);
+        dash.setLayout(null);
+        dash.setVisible(true);
+        dash.setResizable(false);
     }
     public static void main(String[] args) {
         new UserDashboard("Dpaace");
