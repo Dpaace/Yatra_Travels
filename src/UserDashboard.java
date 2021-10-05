@@ -17,6 +17,7 @@ public class UserDashboard implements ActionListener {
         this.user=user;
         // Creating Dashboard Frame
         dash = new JFrame("Dashboard");
+        dash.setLocation(350,150);
         dash.setSize(515,435);
 
         Font fon1=new Font("cambria",Font.BOLD,20);
@@ -42,7 +43,7 @@ public class UserDashboard implements ActionListener {
         btnProfile = new JButton("UPDATE PROFILE");
         btnProfile.setBounds(61,33,210,42);
         btnProfile.setBackground(Color.GREEN);
-        btnProfile.setForeground(Color.WHITE);
+        btnProfile.setForeground(Color.BLACK);
         btnProfile.setBorder(null);
         btnProfile.setFont(fon1);
         btnProfile.addActionListener(this);
@@ -51,7 +52,7 @@ public class UserDashboard implements ActionListener {
         btnDelete = new JButton("DELETE ACCOUNT");
         btnDelete.setBounds(61,106,210,42);
         btnDelete.setBackground(Color.RED);
-        btnDelete.setForeground(Color.WHITE);
+        btnDelete.setForeground(Color.BLACK);
         btnDelete.setBorder(null);
         btnDelete.setFont(fon1);
         btnDelete.addActionListener(this);
@@ -61,7 +62,7 @@ public class UserDashboard implements ActionListener {
         btnTicket = new JButton("BOOK TICKETS");
         btnTicket.setBounds(61,179,210,42);
         btnTicket.setBackground(Color.BLUE);
-        btnTicket.setForeground(Color.WHITE);
+        btnTicket.setForeground(Color.BLACK);
         btnTicket.setBorder(null);
         btnTicket.setFont(fon1);
         btnTicket.addActionListener(this);
@@ -70,7 +71,7 @@ public class UserDashboard implements ActionListener {
         btnDriver = new JButton("DRIVER SECTION");
         btnDriver.setBounds(61,256,210,42);
         btnDriver.setBackground(Color.BLACK);
-        btnDriver.setForeground(Color.WHITE);
+        btnDriver.setForeground(Color.BLACK);
         btnDriver.setBorder(null);
         btnDriver.setFont(fon1);
         btnDriver.addActionListener(this);
@@ -79,7 +80,7 @@ public class UserDashboard implements ActionListener {
         btnPayment = new JButton("PAYMENT");
         btnPayment.setBounds(61,331,210,42);
         btnPayment.setBackground(Color.GRAY);
-        btnPayment.setForeground(Color.WHITE);
+        btnPayment.setForeground(Color.BLACK);
         btnPayment.setBorder(null);
         btnPayment.setFont(fon1);
         btnPayment.addActionListener(this);
@@ -88,6 +89,7 @@ public class UserDashboard implements ActionListener {
 
         dash.setLayout(null);
         dash.setVisible(true);
+        dash.setResizable(false);
     }
 
     public static void main(String[] args) {

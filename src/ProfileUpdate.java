@@ -21,6 +21,7 @@ public class ProfileUpdate implements ActionListener {
         this.user= user;
 
         profile = new JFrame("Profile Update Page");
+        profile.setLocation(300,100);
         profile.setSize(815,635);
         profile.setLayout(null);
 
@@ -208,6 +209,7 @@ public class ProfileUpdate implements ActionListener {
         bg.add(btnBack);
 
         profile.setVisible(true);
+        profile.setResizable(false);
 
     }
 

@@ -21,6 +21,7 @@ public class ViewBooked implements ActionListener {
         this.user = user;
         showBooked = new JFrame("Booked Tickets");
         Font f = new Font("arial", Font.BOLD, 18);
+        showBooked.setLocation(300,100);
         showBooked.setSize(665, 535);
 
 
@@ -82,6 +83,7 @@ public class ViewBooked implements ActionListener {
 
         showBooked.setLayout(null);
         showBooked.setVisible(true);
+        showBooked.setResizable(false);
     }
 
     public static void main(String[] args) {
